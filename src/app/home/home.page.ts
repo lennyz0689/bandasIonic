@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-example',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  isModalOpen = false;
 
-  constructor() {}
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
+  }
 
+  constructor(private toastController: ToastController) {}
+
+  async presentToast(position: 'top' | 'middle' | 'bottom') {
+    const toast = await this.toastController.create({
+      message: 'Fecha guardada!',
+      duration: 150,
+      position: position,
+    });
+
+    await toast.present();
+  }
 }

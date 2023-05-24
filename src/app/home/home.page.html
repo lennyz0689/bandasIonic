@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header translucent="true">
   <ion-toolbar>
     <ion-title>
       Blank
@@ -6,15 +6,206 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card color="warning">
+          <img alt="Silhouette of mountains" src="https://i.pinimg.com/originals/12/e3/1a/12e31aabe0c777ca9cdc2e221eefb34b.jpg" />
+          <ion-card-header>
+            <ion-card-title>La gira mas grande!!</ion-card-title>
+            <ion-card-subtitle>Metallica</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            metallica lanza su nueva gira por latinoamercia...
+    <!-- Boton para modal -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        <ion-button expand="block" (click)="setOpen(true)" color="dark">Open</ion-button>
+        <ion-modal [isOpen]="isModalOpen">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title>Modal</ion-title>
+                <ion-buttons slot="end">
+                  <ion-button (click)="setOpen(false)">Close</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+                reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+                dicta.
+              </p>
+              <ion-datetime color="rose"></ion-datetime>
+              <ion-button expand="block" (click)="presentToast('top')" color="success">Present Toast At the Bottom</ion-button>
+              <img alt="Silhouette of mountains" src="https://e0.pxfuel.com/wallpapers/366/781/desktop-wallpaper-metallica-logo-metallica.jpg" />
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+<!-- 2 -->
+
+<ion-col size="12">
+  <ion-card color="dark">
+    <img alt="Silhouette of mountains" src="https://i.pinimg.com/originals/3d/70/2b/3d702bbc601c00ebfff972fd8b83b65c.jpg" />
+    <ion-card-header>
+      <ion-card-title>Grandes problemas</ion-card-title>
+      <ion-card-subtitle>Iron Maiden</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Iron Maiden tiene problemas con su cantante bruce
+<!-- Boton para modal -->
+
+  <ion-button expand="block" (click)="setOpen(true)" color="warning">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+          dicta.
+        </p>
+        <ion-datetime color="rose"></ion-datetime>
+        <ion-button expand="block" (click)="presentToast('top')" color="success">Present Toast At the Bottom</ion-button>
+        <img alt="Silhouette of mountains" src="https://wallpaperaccess.com/full/7028503.png" />
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-card-content>
+</ion-card>
+</ion-col>
+
+<!-- 3 -->
+
+<ion-col size="12">
+  <ion-card color="danger">
+    <img alt="Silhouette of mountains" src="https://i.pinimg.com/originals/99/30/fc/9930fceac3a2421a9e54f51c25500e50.jpg" />
+    <ion-card-header>
+      <ion-card-title>Los fans lloran</ion-card-title>
+      <ion-card-subtitle>Black Sabbath</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      ¿Ozzy renuncia a Black Sabbath?
+<!-- Boton para modal -->
+
+  <ion-button expand="block" (click)="setOpen(true)" color="light">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+          dicta.
+        </p>
+        <ion-datetime color="rose"></ion-datetime>
+        <ion-button expand="block" (click)="presentToast('top')" color="success">Present Toast At the Bottom</ion-button>
+        <img alt="Silhouette of mountains" src="https://i.pinimg.com/originals/21/a5/5b/21a55b1c18580910e2db64327e78a9fc.jpg" />
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-card-content>
+</ion-card>
+</ion-col>
+
+<!-- 4 -->
+
+<ion-col size="12">
+  <ion-card color="primary">
+    <img alt="Silhouette of mountains" src="https://musicapazyamor.com/wp-content/uploads/2021/07/slash-new-mexico-november-rain.jpg" />
+    <ion-card-header>
+      <ion-card-title>Ya no son tan populares</ion-card-title>
+      <ion-card-subtitle>Guns N Roses</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      La voz de Alx ya no tiene el mismo potencial
+<!-- Boton para modal -->
+
+  <ion-button expand="block" (click)="setOpen(true)" color="success">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+          dicta.
+        </p>
+        <ion-datetime color="rose"></ion-datetime>
+        <ion-button expand="block" (click)="presentToast('top')" color="success">Present Toast At the Bottom</ion-button>
+        <img alt="Silhouette of mountains" src="https://i.revistapym.com.co/old/2016/11/guns_and_roses_historia_logo.png?w=1200" />
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-card-content>
+</ion-card>
+</ion-col>
+
+<!-- 5 -->
+
+<ion-col size="12">
+  <ion-card color="success">
+    <img alt="Silhouette of mountains" src="https://4.bp.blogspot.com/-cGLZ193V3N4/UBcDY5mYgiI/AAAAAAAAAMY/ds3HhAIjDgU/s1600/SOAD.jpg" />
+    <ion-card-header>
+      <ion-card-title>Rompen records</ion-card-title>
+      <ion-card-subtitle>System of a down</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Soad rompe record con sus antiguos albunes, son todo un clasico
+<!-- Boton para modal -->
+
+  <ion-button expand="block" (click)="setOpen(true)" color="danger">Open</ion-button>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpen(false)">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+          dicta.
+        </p>
+        <ion-datetime color="rose"></ion-datetime>
+        <ion-button expand="block" (click)="presentToast('top')" color="success">Present Toast At the Bottom</ion-button>
+        <img alt="Silhouette of mountains" src="https://1000marcas.net/wp-content/uploads/2020/03/System-of-a-Down-logo.jpg" />
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-card-content>
+</ion-card>
+</ion-col>
+</ion-grid>
 </ion-content>
